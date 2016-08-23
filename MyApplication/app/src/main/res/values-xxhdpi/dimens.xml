@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="testWidth">10dp</dimen>
+    <dimen name="testWidth">320dp</dimen>
 </resources>
