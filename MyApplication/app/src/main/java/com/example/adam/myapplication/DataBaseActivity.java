@@ -60,6 +60,11 @@ public class DataBaseActivity extends Activity implements View.OnClickListener {
                 } finally {
                     db.endTransaction();
                 }
+                Cursor cursor1 = db.rawQuery("select last_insert_rowid() from repo", null);
+                if(cursor1.moveToNext()) {
+                    int lastid = cursor1.getInt(0);
+                    Toast.makeText(DataBaseActivity.this, "last id :" + lastid, Toast.LENGTH_SHORT).show();
+                }
                 Toast.makeText(DataBaseActivity.this, "Insert Success", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.deleteBtn:
