@@ -19,7 +19,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.adam.myapplication.Database.DBHelper;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
@@ -49,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         imageLoader = ImageLoader.getInstance();
         imageLoader.init(ImageLoaderConfiguration.createDefault(this));
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn = (Button) findViewById(R.id.button);
@@ -66,15 +66,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listPicBtn.setOnClickListener(this);
         if(!checkPermission(permissions))
             ActivityCompat.requestPermissions(this, list.toArray(new String[list.size()]), 1);
-
-        int maxMemory = (int)Runtime.getRuntime().maxMemory() / 1024;
-        Log.d(TAG, "max memory is " + maxMemory + "kb");
-
-        DisplayImageOptions options = new DisplayImageOptions.Builder()
-                .cacheInMemory(true)
-                .cacheOnDisk(true)
-                .build();
-        imageLoader.displayImage("http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg", imageView, options);
     }
 
     @Override
