@@ -22,6 +22,7 @@
         android:id="@+id/button"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginTop="40dp" />
 
     <Button
@@ -30,4 +31,44 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button"
         android:text="To DB ACT"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/dbBtn"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/photoBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView"
+        android:text="Take Photo"/>
+
+    <Button
+        android:id="@+id/albumBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/photoBtn"
+        android:text="choose album"/>
+
+    <Button
+        android:id="@+id/deletePicBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/albumBtn"
+        android:layout_centerHorizontal="true"
+        android:text="delete pic"/>
+
+    <Button
+        android:id="@+id/listPicBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deletePicBtn"
+        android:layout_centerHorizontal="true"
+        android:text="list pic"/>
+
 </RelativeLayout>
